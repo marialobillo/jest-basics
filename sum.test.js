@@ -21,8 +21,20 @@ test('should be falsy', () => {
 });
 
 test('should be Maria Lobillo object', () => {
-	expect(functions.createUser()).toBe({
+	expect(functions.createUser()).toEqual({
 		firstName: 'Maria',
 		lastName: 'Lobillo'
 	});
+});
+
+// less than and greater than
+test('should be under 1600', () => {
+	const load1 = 800;
+	const load2 = 700;
+	expect(load1 + load2).toBeLessThan(1600);
+});
+
+// Regex
+test('There is no I in team', () => {
+	expect('team').not.toMatch(/I/);
 });
