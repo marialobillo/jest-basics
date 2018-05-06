@@ -17,5 +17,12 @@ test('should be null', () => {
 });
 
 test('should be falsy', () => {
-	expect(functions.checkValue(null).toBeFalsy());
+	expect(functions.checkValue(null)).toBeFalsy();
+});
+
+test('should be Maria Lobillo object', () => {
+	expect(functions.createUser()).toBe({
+		firstName: 'Maria',
+		lastName: 'Lobillo'
+	});
 });
