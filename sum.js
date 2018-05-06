@@ -1,6 +1,7 @@
 
-function sum(a, b){
-	return a + b;
-}
+const functions = {
+	sum : (a, b) => a + b,
+	isNull: () => null
+};
 
-module.exports = sum;
+module.exports = functions;
