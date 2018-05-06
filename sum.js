@@ -1,3 +1,5 @@
+const axios = require('axios');
+
 
 const functions = {
 	sum : (a, b) => a + b,
@@ -9,7 +11,10 @@ const functions = {
 			lastName: 'Lobillo'
 		};
 		return user;
-	}
+	},
+	fetchUser: () => axios.get('https://jsonplaceholder.typicode.com/users/1')
+		.then(res => res.data)
+		.catch(err => 'error')
 };
 
 module.exports = functions;
